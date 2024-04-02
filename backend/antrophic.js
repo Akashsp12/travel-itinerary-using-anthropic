@@ -1,9 +1,9 @@
 const Anthropic = require("@anthropic-ai/sdk");
 
 
-const api_key = process.env.ANTHROPIC_KEY;
+
 const anthropic = new Anthropic({
-  apiKey: api_key, 
+  apiKey: process.env.ANTHROPIC_KEY, 
 });
 
 async function createMessage(userinput) {
