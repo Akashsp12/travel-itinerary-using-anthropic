@@ -1,0 +1,23 @@
+img {
+  width: 200px;
+  display: block;
+  margin: 6% auto;
+}
+p {
+  width: 80%;
+  font-size: 2em;
+  text-align: center;
+  margin: 5% auto;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 500px) {
+  img {
+    width: 100px;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}

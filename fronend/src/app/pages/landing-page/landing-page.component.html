@@ -1,0 +1,26 @@
+<div class="large">
+
+    <div class="flexArea">
+        <div class="div1">
+            <app-form (formSubmitted)="postData($event)"></app-form>
+        </div>
+        <div class="div2">
+            <app-response-page [result]="this.response" [loader]="loader" [showImage]="showImage"></app-response-page>
+        </div>
+    </div>
+
+
+
+    <!-- <p-splitter styleClass="mb-5 h-full" [panelSizes]="[70, 30]" [ngStyle]="{ 'height': '100vh' }">
+        <ng-template pTemplate style="height: 100vh;">
+            <div class="col flex align-items-center justify-content-center border-solid border-primary-500 h-full">
+             
+            </div>
+        </ng-template>
+        <ng-template pTemplate>
+            <div class="col flex ">
+  
+            </div>
+        </ng-template>
+    </p-splitter> -->
+</div>

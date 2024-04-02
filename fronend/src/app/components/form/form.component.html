@@ -1,0 +1,52 @@
+<img src="../../../assets/Bisleri_logo_green-removebg-preview.png" alt="" srcset="">
+<p>
+    <!-- Where next? Discover and plan your next trip in seconds with our AI-travel planner. -->
+    Thirsty for adventure? Dive into our AI-travel planner!
+</p>
+
+<form [formGroup]="form" class="aiform p-2">
+
+
+
+    <div class="block border-round mb-3">
+        <div class="flex flex-column h-4rem p-4 border-round border-primary">
+            <label for="from">From</label>
+            <input pInputText id="from" aria-describedby="from-help" formControlName="from" /><br>
+        </div>
+    </div>
+    <div class="block border-round mb-3">
+        <div class="flex flex-column h-4rem p-4 border-round border-primary">
+            <label for="destination">Destination</label>
+            <input pInputText id="destination" aria-describedby="destination-help" formControlName="destination" /><br>
+        </div>
+    </div>
+    <div class="block border-round mb-3">
+        <div class="flex flex-column h-4rem p-4 border-round border-primary">
+            <label for="areaOfInterest">Area of Interest</label>
+            <p-multiSelect styleClass="w-full" [options]="areaOfInterest" optionLabel="name"
+                formControlName="areaOfInterest"></p-multiSelect>
+        </div>
+    </div>
+
+
+    <div class="block  border-round mb-3">
+        <div class="flex flex-column  h-4rem  p-4 border-round border-primary">
+            <label for="username">Budget</label>
+
+            <p-inputNumber inputId="integeronly" styleClass="w-full " formControlName="budget"> </p-inputNumber>
+        </div>
+    </div>
+
+
+    <div class="block  border-round mb-3 mt-2">
+        <div class="flex flex-column  h-4rem  p-4 mt-2 border-round border-primary">
+            <br>
+            <p-button label="Submit" styleClass="w-full" [loading]="loading" (onClick)="load()"></p-button>
+
+        </div>
+    </div>
+</form>
+<br>
+<br>
+<br>
+<br>
