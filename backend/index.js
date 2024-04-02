@@ -1,22 +1,27 @@
-// Import required modules
-const express = require('express');
 
-// Create an Express application
+const express = require("express");
+const bodyParser = require("body-parser");
+
 const app = express();
-require('dotenv').config()
-// Define a route
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
+var cors = require("cors");
+
+var corsOptions = {
+  origin: "*",
+  optionsSuccessStatus: 200,
+};
 
 
 
-// Start the server
-const PORT = process.env.PORT || 3000;
+app.use(bodyParser.json()); 
+app.use(cors(corsOptions));
+
+
+app.use("/chat", require("./Routes"));
+
+
+const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-createMessage ();
 
 
